@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+</script>
+
+<script>
+$(function() {
+    $("#frameSelect1").click(function(){
+        $("#userFrame").attr('src','https://en.wikipedia.org/wiki/Fluid_dynamics')
+		$("p").hide();
+		$("#userFrame").show();
+    });
+    $("#frameSelect2").click(function(){
+        $("#userFrame").attr('src','https://en.wikipedia.org/wiki/User_experience_design')
+		$("p").hide();
+		$("#userFrame").show();
+    });
+    $("#frameSelect3").click(function(){
+        $("#userFrame").attr('src','https://en.wikipedia.org/wiki/University_of_New_Brunswick')
+		$("p").hide();
+		$("#userFrame").show();
+
+    });
+    $("#frameSelect4").click(function(){
+        $("#userFrame").attr('src','https://en.wikipedia.org/wiki/Fredericton')
+		$("p").hide();
+		$("#userFrame").show();
+    });
+});
+
+$(document).ready(function(){
+	$("#userFrame").hide();
+    document.getElementById("welcome").style.textAlign = "center";
+ });
+
+</script>s
+
+<style>
+body, html {
+	width: 100%;
+	height: 100%;
+	font: bold 40px arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f23131;
+}
+
+img {
+	padding: 15px;
+	position: relative;
+	vertical-align: middle;
+}
+
+li {
+	font: bold 23px arial, sans-serif;
+	position: relative;
+    display: block;
+    color: black;
+    text-align: center;
+	height: 62px;
+	line-height: 62px;
+    padding-left: 15px;
+	padding-right: 15px;
+    float: right;
+	transition: background-color 0.5s;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+li:hover {
+	background-color: #f76b6b;
+}
+
+.banner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding-left: 15px;
+	padding-right: 15px;
+	height: 62px;
+	background-color: #f23131;
+}
+
+.frameContainer {	
+	position: absolute;
+	top: 62px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.frameContainer iframe {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border: none;
+}
+</style>
+</head>
+
+<body>
+	<div class="banner">
+		<img src="http://envenio.com/wp-content/uploads/2017/08/light-logo.png">
+		<ui>
+			<li id="frameSelect4"> View 4
+			</li>
+			<li id="frameSelect3"> View 3
+			</li>
+			<li id="frameSelect2"> View 2
+			</li>
+			<li id="frameSelect1"> View 1
+			</li>
+		</ui>
+
+	</div>
+
+
+	<div class="frameContainer">
+		<p id="welcome">Select a view from the menu at the top to begin!</p>
+		<iframe id="userFrame" src="https://en.wikipedia.org/wiki/Fluid_dynamics"></iframe>
+	</div>
+</body>
+</html>
